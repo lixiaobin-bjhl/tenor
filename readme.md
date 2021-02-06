@@ -9,22 +9,21 @@
 
 # 使用部署
 
-* 安装依赖
+1、 安装依赖
 
 ```
 npm install 
 ```
-* 修改config.js。指定platformStr、statusShellPath、logFile 等配置。
-* 配置定时任务。
+2、 修改config.js。指定platformStr、statusShellPath、logFile 等配置。  
+3、 配置定时任务。
 
  ```
- crontab -e 打开crontab编辑器
+ crontab -e 打开crontab编辑器输入下面代码
  ```
     
 ```
-键入
 */2 * * * * /root/.nvm/versions/node/v10.15.3/bin/node /root/tenor/main.js
-``` 
  示例为每两分钟检测一次，可根据实际情况调整并修改node与tenor的目录。
-* 运行systemctl restart crond.service 重启crond。
-* 查看config中配置的日志路径文件，check日志输出是否正常。
+``` 
+4、 运行systemctl restart crond.service 重启crond。  
+5、 查看config中配置的日志路径文件，check日志输出是否正常。
