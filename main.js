@@ -30,7 +30,7 @@ function sendMessage(str) {
 
 shell.exec('sh ' + config.statusShellPath, (code, stdout, stderr) => {
     if (code === 0) {
-        let input =  stdout.split('\n');
+        let input = stdout.split('\n');
         let errorServiceList = [];
         input.forEach((item)=> {
             if (item.indexOf('OFF') > -1) {
